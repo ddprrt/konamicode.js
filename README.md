@@ -45,3 +45,11 @@ konamicode(document.body, function() {
 	alert('Mega Man got Atomic Fire')
 });
 ```
+
+## Inclusion
+
+Just download either konamicode.min.js oder konamicode.jquery.min.js. You don't need both, but you need the
+latter if you want to use it with jQuery. 
+
+If you don't want to use the minified version, include the js files from the src directory. You need both if
+you want to use it with jQuery.
