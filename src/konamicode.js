@@ -1,4 +1,14 @@
-(function (window, undefined) {
+/**
+
+	Author: Stefan Baumgartner (@ddprrt)
+	File: konamicode.js
+
+	Description: Adds the konamicode to any element on your website. You can add a multitude
+	of callbacks.
+	
+**/
+
+!function (window, undefined) {
 
 	'use strict';
 
@@ -58,4 +68,4 @@
 		}
 	}
 
-})(window)
+}(window)
