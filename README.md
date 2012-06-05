@@ -21,7 +21,7 @@ Very simple:
 
 ```javascript
 konamicode(document.body, function() {
-	alert('Mega Man now has Metal Blade, even though he's not from Konami!')
+	alert('Mega Man now has Metal Blade, even though he is not from Konami!')
 });
 ```
 
