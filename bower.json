@@ -1,0 +1,7 @@
+{
+  "name": "konamicode.js",
+  "version": "1.0.0",
+  "main": "build/konamicode.min.js",
+  "ignore": [
+  ]
+}
