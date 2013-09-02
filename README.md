@@ -1,7 +1,7 @@
 konamicode.js
 =============
 
-Easter-egg your website with the konami-code!. Every developer loves to add 
+Easter-egg your website with the konami-code! Every developer loves to add 
 some hidden, tiny bits and pieces into his website or web application once the project
 goes into its final and stressful phase.
 
@@ -38,11 +38,11 @@ after the other.
 
 ```javascript
 konamicode(document.body, function() {
-	alert('Mega Man now has Metal Blade, even though he is not from Konami!')
+	alert('Mega Man now has Metal Blade, even though he is not from Konami!');
 });
 
 konamicode(document.body, function() {
-	alert('Mega Man got Atomic Fire')
+	alert('Mega Man got Atomic Fire');
 });
 ```
 
