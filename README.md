@@ -7,6 +7,14 @@ goes into its final and stressful phase.
 
 Those easter-eggs can now be done with the hottest cheat-code ever: [The Konami Code](http://en.wikipedia.org/wiki/Konami_Code)
 
+## Bower package
+
+Install konamicode.js with [Bower](http://bower.io)
+
+```
+bower install konamicode.js
+```
+
 ## The Konami Code
 
 Press the following keys in order:
