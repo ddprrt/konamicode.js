@@ -1,0 +1,30 @@
+{
+  "name": "konamicode.js",
+  "version": "1.0.0",
+  "description": "Easter-egg your website with the konami-code",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddprrt/konamicode.js"
+  },
+  "keywords": [
+    "konamicode",
+    "easteregg",
+    "cheat",
+    "konami"
+  ],
+  "author": "Stefan Baumgartner (@ddprrt)",
+  "bugs": {
+    "url": "https://github.com/ddprrt/konamicode.js/issues"
+  },
+  "homepage": "https://github.com/ddprrt/konamicode.js",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.9.2",
+    "gulp-uglify": "^1.1.0"
+  }
+}
