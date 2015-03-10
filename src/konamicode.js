@@ -5,7 +5,7 @@
 
     Description: Adds the konamicode to any element on your website. You can add a multitude
     of callbacks.
-    
+
 **/
 
 ;(function (window, undefined) {
@@ -15,7 +15,18 @@
     var keyCodes = [38,38,40,40,37,39,37,39,66,65],
         elems = {};
 
-    window.konamicode = function(elem, callback) {
+    window.konamicode = function(elem) {
+        var callback, keyphrase;
+
+        for(var i = 1; i < arguments.length; i = i+1) {
+            if(typeof arguments[i] == 'function') {
+                callback = arguments[i];
+            }
+            if(typeof arguments[i] == 'string') {
+                keyphrase = arguments[i];
+            }
+        }
+
         if(!elems[elem]) {
             elems[elem] = new KonamiCode(elem);
         }
@@ -23,14 +34,20 @@
         elems[elem].addCallback(callback);
     }
 
-    function KonamiCode(elem) {
+    function KonamiCode(elem, keyphrase) {
         var that = this;
+        if(!!keyphrase) {
+            keyCodes = [];
+            keyphrase.split('').forEach(function(el) {
+                keyCodes.push(el.charCodeAt(0));
+            });
+        }
         that.elem = elem;
         if (that.elem.addEventListener) {
-            that.elem.addEventListener('keyup', check, false);   
+            that.elem.addEventListener('keyup', check, false);
         } else if (that.elem.attachEvent) {
-            that.elem.attachEvent('onkeyup', check);  
-        } 
+            that.elem.attachEvent('onkeyup', check);
+        }
 
         function check(ev) {
             that.checkPosition(ev);
