@@ -19,10 +19,10 @@
         var callback, keyphrase;
 
         for(var i = 1; i < arguments.length; i = i+1) {
-            if(typeof arguments[i] == 'function') {
+            if(typeof arguments[i] === 'function') {
                 callback = arguments[i];
             }
-            if(typeof arguments[i] == 'string') {
+            if(typeof arguments[i] === 'string') {
                 keyphrase = arguments[i];
             }
         }
@@ -32,10 +32,14 @@
         }
 
         elems[elem].addCallback(callback);
-    }
+    };
 
     function KonamiCode(elem, keyphrase) {
-        var that = this;
+        var that = this,
+            check = function check(ev) {
+                that.checkPosition(ev);
+            };
+
         if(!!keyphrase) {
             keyCodes = [];
             keyphrase.split('').forEach(function(el) {
@@ -47,10 +51,6 @@
             that.elem.addEventListener('keyup', check, false);
         } else if (that.elem.attachEvent) {
             that.elem.attachEvent('onkeyup', check);
-        }
-
-        function check(ev) {
-            that.checkPosition(ev);
         }
     }
 
@@ -83,6 +83,6 @@
                 this.position = 0;
             }
         }
-    }
+    };
 
-})(window)
+})(window);

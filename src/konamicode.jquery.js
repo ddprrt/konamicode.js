@@ -8,12 +8,12 @@
 
 **/
 
-!function ($, window, undefined) {
+(function ($, window, undefined) {
 
     $.fn.konamicode = function(callback) {
         if(window.konamicode) {
             window.konamicode(this[0], callback);
         }
-    }
+    };
 
-}(jQuery, window)
+})(jQuery, window);
